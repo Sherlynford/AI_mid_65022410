@@ -14,7 +14,7 @@ df.drop(columns=['User ID'], inplace=True)
 x = df.iloc[:, 1:3].bfill()
 y = df['Purchased']
 
-x_train, x_test, y_train, y_test = train_test_split(x, y,test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y,test_size=0.2, random_state=80)
 model = DecisionTreeClassifier(criterion='entropy')
 model.fit(x_train, y_train)
 
