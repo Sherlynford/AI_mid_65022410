@@ -33,8 +33,10 @@ _ = plot_tree(model,
               fontsize=16)
 plt.show()
 
-accuracy = model.score(x_test, y_test)
-print('Accuracy: {:.2f}'.format(accuracy))
+accuracy_train = model.score(x_train,y_train)
+accuracy_test = model.score(x_test, y_test)
+print('Accuracy_Train: {:.2f}'.format(accuracy_train))
+print('Accuracy_Test: {:.2f}'.format(accuracy_test))
 
 feature_imp = model.feature_importances_
 feature_names = ['Age','AnnualSalary']
